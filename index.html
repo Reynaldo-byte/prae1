@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+	<script type="text/javascript">function avanza(id){
+	if (id==1) {
+		document.getElementById('1').setAttribute('hidden','')
+				document.getElementById('1.1').setAttribute('hidden','')
+						document.getElementById('2').removeAttribute('hidden')
+				document.getElementById('2.1').removeAttribute('hidden')
+
+	}
+	else{
+								document.getElementById('2').setAttribute('hidden','')
+				document.getElementById('2.1').setAttribute('hidden','')
+				document.getElementById('menu').removeAttribute('hidden')
+								document.getElementById('formulario').removeAttribute('hidden')
+								document.getElementById('img').removeAttribute('hidden')
+
+	}
+}</script>
+	<script src="script.js"></script>
+	<div style="position: absolute; top: 0px;left: 0px;background-color:transparent;width:fit-content;padding:0px">
+      <img src="recursos/img-foot.png" alt="logo: escuela nueva">
+    </div>
+    		    <div id="aviso-movil-horizontal"><br><br>
+			<p> Para disfrutar de una mejor experiencia rota tu dispositivo</p>
+    <img src="recursos/rotate.gif"/></div>
+	<h1>PRAE</h1>
+	<div id="inicio" style="width: 40%;margin-left:auto;margin-top:1% ;margin-right: auto;">
+		<p id="1"style="float: left;width: 45%;">Selecciona del menu la opción que deseas observar:<br><button onclick="avanza(1)">Siguiente</button></p>
+			<img id="1.1" style="float:right;" width="50%" src="recursos/menu.gif" >
+			<p id="2" style="float:right;" hidden>A continuación nos mostrara<br><img width="60%" id="2.1" src="recursos/texto.png"><br><button onclick="avanza(2)">Siguiente</button></p>
+	</div>
+<div id="menu" hidden>
+	<button onclick="mostrar(1)">Título</button><br>
+	<button onclick="mostrar(2)">Introducción</button><br>
+	<button onclick="mostrar(3)">Identificación del problema</button><br>
+	<button onclick="mostrar(4)">Justificación</button><br>
+	<button onclick="mostrar(5)">Propositos</button><br>
+	<button onclick="mostrar(6)">Metas</button><br>
+	<button onclick="mostrar(7)">Marco referencial</button><br>
+	<button onclick="mostrar(8)">Diseño Metodológico</button><br>
+	<button onclick="mostrar(9)">Recursos</button><br>
+	<button onclick="mostrar(10)">Cronograma</button><br>
+	<button onclick="mostrar(11)">Resultados</button><br>
+	<button onclick="mostrar(12)"> Conclusiones</button><br>
+	<button onclick="mostrar(13)">Recomendaciones</button><br>
+	<button onclick="mostrar(14)">Bibliografía</button><br>
+</div><br>
+	<form name="formulario" method="post" action="word.php" id="formulario" hidden>
+		<p id="titulo"><b class="verde">Título o Nominación:</b> El primer paso para la formulación del Proyecto Escolar Ambiental es buscar un título o nombre adecuado. Debemos tener en cuenta:<br>A. ¿Cuál es el tema que vamos a trabajar en el proyecto?<br>B. ¿Quiénes vamos a trabajar en proyecto?<br>C. ¿Dónde se realizarán las actividads del proyecto?</p>
+		<input type="text" name="titulo" id="titulo1">
+		<p id="intro" hidden><b class="verde">Introducción: </b>Es la presentación general del proyecto, describiendo en forma resumida la propuesta de trabajo. Se deben explicar los objetivos, alcances, limitaciones y la manera de ejecutarlo.<br>Una buena introducción se identifica cuando al leerla logramos transmitir la idea clara del pryecto.</p>
+		<input type="text" name="intro" id="intro1" hidden>
+		<p id="id_problema" hidden><b class="verde">Identificación problema: </b>Permite conocer la situación que se va a abordar como tema de estudio y la identificación hacia donde se va a dirigir.</p>
+		<input type="text" name="id_problema" id="id_problema1" hidden>
+		<p id="justificacion" hidden><b class="verde">Justificación: </b> Requiere que hagamos una exposición de las inquietudes que nos han llevado a su formulación y que nos motivan a realizarlo, explicando las razones, importancia y valor que tienen. De la misma manera, debemos estudiar las condiciones que harán posible la ejecución del proyecto y los posibles resultados.</p>
+		<input type="text" name="justificacion" id="justificacion1" hidden>
+		<p id="proposito" hidden><b class="verde" >Propósitos: </b> Contienen de forma general y específica los objetivos y/o logros que concretamente nos vamos a proponer con el desarrollo del proyecto.<br>Algunas características de los propositos:<br>1. Claramente formulados.<br>2. Deben estar ligados al tema en estudiante.<br>3.Concretos y medibles.<br>4. Que faciliten la evaluación del proyecto.</p>
+		<input type="text" name="proposito" id="proposito1" hidden>
+		<p id="metas" hidden><b>Metas: </b>Son los mismos propósitos que acabamos de formular, pero en esta ocasión debemos proponerlos teniendo como referencia un tiempo determinado para alcanazarlos.  </p>
+		<input type="text" name="metas" id="metas1" hidden>
+		<p id="marco" hidden><b class="verde">Marco referencial: </b>Son los conceptos que nos pueden servir de apoyo paraa nuestra investigación, es necesario que estén relacionados con los objetivos, podemos hacer planteamientos de experiencias que ya han sido construidas por otras relacionadas con el tema ambiental.<br>Las fuentes para seleccionar las referencias pueden ser: experiencias, estudios estadísticas, informaciones directas, material bibliográfico y otros documentos.</p>
+		<input type="text" name="marco" id="marco1" hidden>
+		<p id="diseno" hidden><b class="verde">Diseño Metodológico:</b> Para el diseño y la implementación de nuestro PRAE, debemos definir el lugar donde se desarrollara el proyecto, las personas que participaran del mismo y la población que podría resultar beneficionada en el proceso. Es necesario que con ayuda de nuestro profesor o profesora, elaboremos de acuerdo a nuestras necesidades algunos instrumentos para la obtención de la información: guías, encuestas, entrevistas y cuestionarios. </p>
+		<input type="text" name="diseno" id="diseno1" hidden>
+		<p id="recursos" hidden><b class="verde">Recursos:</b> Los recursos para el PRAE, los podemos identificar teniendo en cuenta la siguiente clasificación.<br><b>Humanos: </b> hacemos referencia a las personas que participan en el proyecto.<br><b>Institucionales: </b> comprometemos las insstituciones que integra el proyecto.<br><b>Físicos: </b> los materiales, instalaciones, instrumentos, equipos y herramientas.<br><b>Económicos: </b> señalamos los posibles gastos y la manera de financiarlo. Para ello, realizamos un informe que describa de manera organizada los gastos que implica la elaboración y ejecución del Proyecto.</p>
+		<input type="text" name="recursos" id="recursos1"hidden><p id="cronograma" hidden><b class="verde">Cronograma: </b> Es un calendario de trabajo, en el cual vamos a realizar una descripción detallada de las actividades que hemos programado, determinando la fecha, su duración y las personas responsables.<br> Este cronograma debe ser conocido y constantmente revisado por los particpantes con el fin de garantizar el edsarrollo de lo planeado y ajustar las actividades, tiempos y responsabilidades que lo requieran. </p>
+		<input type="text" name="cronograma" id="cronograma1" hidden>
+		<p id="conclusiones" hidden><b class="verde">Conclusiones: </b> Deben mostrar de manera sintetizada el resultado obtenido del PRAE, mediante la formulaciónde algunas ideas concretas para la reflexión de la experiencia.</p>
+
+		<input type="text" name="conclusiones" id="conclusiones1" hidden>
+		<p id="recomendaciones" hidden><b class="verde">Recomendaciones: </b>A partir de las dificultaddes identificadas en el desarrollo del proyecto debemos hacer sugerencias que sirvan para efectuar mejoras al PRAE.</p>
+		<input type="text" name="recomendaciones" id="recomendaciones1" hidden>
+		<p id="biblio" hidden><b class="verde">Bibliografía: </b> Recordemos que debemos relacionar todas las fuentes consultadas para el desarrollo de nuestra investigación. Es necesario conocer als normas ICONTEC.</p>
+		<input type="text" name="biblio" id="biblio1" hidden>
+		<br><br>
+		<input type="submit" style="width: fit-content;height: fit-contentrecursos/;" value="Doc. Final" id="button" />
+	</form><br><br>
+	<div id="img" style="border-radius: 1rem;;
+
+;float: left;width: 20%;margin-left: 10%;padding: 0.2rem;margin-top: 1%" hidden><img style="padding: 0.65rem;height: 20%;;margin-right: 10%;" src="recursos/PersonajeOjos.gif" ></div>
+	
+
+</body>
+</html>

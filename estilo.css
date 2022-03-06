@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'Geller Sans Nr';
+    src: local('Geller Sans Nr Heavy'), local('Geller-Sans-Nr-Heavy'),
+        url('recursos/GellerSansNr-Heavy.woff2') format('woff2'),
+        url('recursos/GellerSansNr-Heavy.woff') format('woff'),
+        url('recursos/GellerSansNr-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
+body{
+	background-image: url('recursos/fondo.png');
+	background-size: cover;
+	text-align: center;
+	font-family: 'Geller Sans Nr';
+}
+.verde{
+	color: green;
+	font-family: 'Geller Sans Nr';
+	font-size: 1.1rem;
+}
+form{
+	margin: auto;
+	float: left;
+	width: 40%;
+	text-align:center;
+	background-color: rgba(255, 255, 255, 0.6);
+	padding: 0.6rem;
+	border-radius: 1rem;
+	border-color: darkgreen;
+	border-style: double;
+	border-width: 0.3rem;
+}
+form p{
+	text-align: justify;
+	font-family: arial;
+
+}
+input{
+	width: 50vh;
+	height: 15vh;
+	border-radius: 1rem;
+	border-color: orange;
+	border-style: double;
+	
+}
+#menu{
+	
+	text-align: center;
+	float: left;
+	width: 45%;
+}
+h1{
+	text-shadow: -4px 4px 1px white;
+background-color: #5cdb5c;
+width: 50%;
+padding: 0.5rem;
+margin: auto;
+border-style: solid;
+border-color: darkgreen;
+border-radius: 1rem;
+}   
+         
+
+         button,#button {background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%)}
+         button,#button {
+            margin: 0.5rem;
+            padding: 0.4rem;
+            text-align: center;
+            width: 60%;
+            font-size: 1.15rem;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            font-family: 'Geller Sans Nr';
+            text-shadow: 1px 2px 2px green;
+          }
+
+          button:hover,#button:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+  #aviso-movil-horizontal { display: none; }
+    @media only screen and (orientation:portrait) {
+        #inicio,#menu,form,#img { display:none; }
+        #aviso-movil-horizontal { z-index: 0;
+          display:block;
+      font-size: 1rem;
+                text-align: center;
+                font-weight: bolder;
+                margin: auto;
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 1rem;}
+                img{
+
+    margin-left: -20%;
+
+                }
+      
+    }
+    @media only screen and (orientation:landscape) {
+        #aviso-movil-horizontal { display:none; }
+    }
