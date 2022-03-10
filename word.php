@@ -31,7 +31,7 @@ $templateWord->setValue('biblio',$biblio);
 $templateWord->setValue('conclusiones',$conclusiones);
 $templateWord->setValue('cronograma',$crono);
 
-$templateWord->saveAs('prae.docx');
+$templateWord->saveAs('recursos/prae.docx');
   header("Content-Disposition: attachment; filename=prae.docx; charset=iso-8859-1");
-        echo file_get_contents('prae.docx');
+       
 ?>
