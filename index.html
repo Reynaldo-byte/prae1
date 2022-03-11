@@ -53,11 +53,9 @@
 	<button onclick="mostrar(13)">Recomendaciones</button><br>
 	<button onclick="mostrar(14)">Bibliografía</button><br>
 </div><br>
-<<<<<<< HEAD
-	<form name="formulario" method="post"  id="formulario" hidden>
-=======
-	<form name="formulario" method="post" action="recursos/word.php" id="formulario" hidden>
->>>>>>> 5a0b3c939994371f915e9444ad344fc24514bce4
+
+	<div   id="formulario" hidden>
+
 		<p id="titulo"><b class="verde">Título o Nominación:</b> El primer paso para la formulación del Proyecto Escolar Ambiental es buscar un título o nombre adecuado. Debemos tener en cuenta:<br>A. ¿Cuál es el tema que vamos a trabajar en el proyecto?<br>B. ¿Quiénes vamos a trabajar en proyecto?<br>C. ¿Dónde se realizarán las actividads del proyecto?</p>
 		<input type="text" name="titulo" id="titulo1">
 		<p id="intro" hidden><b class="verde">Introducción: </b>Es la presentación general del proyecto, describiendo en forma resumida la propuesta de trabajo. Se deben explicar los objetivos, alcances, limitaciones y la manera de ejecutarlo.<br>Una buena introducción se identifica cuando al leerla logramos transmitir la idea clara del pryecto.</p>
@@ -89,12 +87,12 @@
 		<p id="biblio" hidden><b class="verde">Bibliografía: </b> Recordemos que debemos relacionar todas las fuentes consultadas para el desarrollo de nuestra investigación. Es necesario conocer als normas ICONTEC.</p>
 		<input type="text" name="biblio" id="biblio1" hidden>
 		<br><br>
-<<<<<<< HEAD
-		<button onclick="generate()" style="width: fit-content;height: fit-content;"  id="button">Doc. Final</button>
-=======
-		<input type="submit" style="width: fit-content;height: fit-content;" value="Doc. Final" id="button" />
->>>>>>> 5a0b3c939994371f915e9444ad344fc24514bce4
-	</form><br><br>
+
+		<button onclick="data()" style="width: fit-content;height: fit-content;"  id="button">Doc. Final</button>
+
+
+
+	</div><br><br>
 	<div id="img" style="border-radius: 1rem;;
 
 ;float: left;width: 20%;margin-left: 10%;padding: 0.2rem;margin-top: 1%" hidden><img style="padding: 0.65rem;height: 20%;;margin-right: 10%;" src="recursos/PersonajeOjos.gif" ></div>
@@ -113,12 +111,44 @@
         ></script>
     <![endif]-->
     <script>
+    	let titulo1='';
+let intro1='';;
+let id_problema1='';
+let justificacion1='';
+let proposito1='';
+let metas1='';;
+let marco1='';;
+let diseno1='';;
+let recursos1='';
+let recomendaciones1='';
+let biblio1='';
+let conclusiones1='';
+let crono1='';
+let resultados1='';
+    	function data() {
+    		 titulo1=''+document.getElementById('titulo1').value;
+ intro1=''+document.getElementById('intro1').value;
+ id_problema1=''+document.getElementById('id_problema1').value;
+ justificacion1=''+document.getElementById('justificacion1').value;
+ proposito1=''+document.getElementById('proposito1').value;
+ metas1=''+document.getElementById('metas1').value;
+ marco1=''+document.getElementById('marco1').value;
+ diseno1=''+document.getElementById('diseno1').value;
+ recursos1=''+document.getElementById('recursos1').value;
+ recomendaciones1=''+document.getElementById('recomendaciones1').value;
+ biblio1=''+document.getElementById('biblio1').value;
+ conclusiones1=''+document.getElementById('conclusiones1').value;
+ crono1=''+document.getElementById('cronograma1').value;
+ resultados1=''+document.getElementById('resultados1').value;
+ console.log(titulo1)
+    	generate()
+    	}
         function loadFile(url, callback) {
             PizZipUtils.getBinaryContent(url, callback);
         }
         function generate() {
             loadFile(
-                "https://github.com/Reynaldo-byte/prae1/blob/main/plantilla.docx",
+                "plantilla.docx",
                 function (error, content) {
                     if (error) {
                         throw error;
@@ -131,18 +161,20 @@
 
                     // Render the document (Replace {first_name} by John, {last_name} by Doe, ...)
                     doc.render({
-                        intro:document.getElementById('intro').value,
-                        id_problema:document.getElementById('id_problema').value,
-                        justificacion:document.getElementById('justificacion').value,
-                        proposito:document.getElementById('proposito').value,
-                        metas:document.getElementById('metas').value,
-                        marco:document.getElementById('marco').value,
-                        recursos:document.getElementById('recursos').value,
-                        cronograma:document.getElementById('cronograma').value,
-                        resultados:document.getElementById('resultados').value,
-                        recomendaciones:document.getElementById('recomendaciones').value,
-                        conclusiones:document.getElementById('conclusiones').value,
-                        biblio:document.getElementById('biblio').value,
+                        intro:''+intro1,
+                        diseno:''+diseno1,
+                        titulo:''+titulo1,
+                        id_problema:''+id_problema1,
+                        justificacion:''+justificacion1,
+                        proposito:''+proposito1,
+                        metas:''+metas1,
+                        marco:''+marco1,
+                        recursos:''+recursos1,
+                        cronograma:''+crono1,
+                        resultados:''+resultados1,
+                        recomendaciones:''+recomendaciones1,
+                        conclusiones:''+conclusiones1,
+                        biblio:''+biblio1,
 
                     });
 
