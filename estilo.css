@@ -18,7 +18,7 @@ body{
 	font-family: 'Geller Sans Nr';
 	font-size: 1.1rem;
 }
-form{
+#formulario{
 	margin: auto;
 	float: left;
 	width: 40%;
